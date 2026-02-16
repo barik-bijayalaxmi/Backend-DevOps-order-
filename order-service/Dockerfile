@@ -1,7 +1,20 @@
+# Use lightweight Node image
 FROM node:18-alpine
+ 
+# Set working directory
 WORKDIR /app
-COPY package.json .
-RUN npm install
+ 
+# Copy package.json and package-lock.json (if exists)
+COPY package*.json ./
+ 
+# Install dependencies
+RUN npm install --production
+ 
+# Copy the rest of the application
 COPY . .
+ 
+# Expose container port
 EXPOSE 5000
-CMD ["npm", "start"]
+ 
+# Start the app
+CMD ["node", "app.js"]
