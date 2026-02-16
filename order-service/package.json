@@ -1,11 +1,14 @@
 {
-  "name": "order-service",
+  "name": "user-service",
   "version": "1.0.0",
+  "description": "User Service for ECS",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "mysql2": "^3.9.0"
   }
 }
