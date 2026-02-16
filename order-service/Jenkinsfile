@@ -9,7 +9,7 @@ pipeline {
         ECR_URI  = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}"
 
         ECS_CLUSTER = "dev_cluster"
-        ECS_SERVICE = "orderservice-task-service-8n63bs3z"
+        ECS_SERVICE = "orderservice-task-service-5nnz15hz"
 
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
